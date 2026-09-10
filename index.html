@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FTC Team 6078 - Cut the Red Wire</title>
+
+    <!-- PLUGINS CSS STYLE -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/animate.css">
+    <link rel="stylesheet" href="plugins/pop-up/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/owl.carousel.css" media="screen">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css" id="option_color">
+    <link rel="stylesheet" href="css/ctrw.css">
+</head>
+
+<body class="body-wrapper">
+
+    <div class="main_wrapper">
+
+        <!-- ===================== TOP BAR + HEADER ===================== -->
+        <div id="top-bar">
+            <header class="header-wrapper header-v2">
+                <div class="topbar clearfix">
+                    <div class="container">
+                        <ul class="topbar-left">
+                            <li class="email-id hidden-xs hidden-sm">
+                                <i class="fa fa-envelope"></i>
+                                <a href="#">YOUR-EMAIL@cuttheredwire.org</a>
+                            </li>
+                        </ul>
+                        <ul class="topbar-right">
+                            <li>
+                                <button class="btn btn-success btn-sm" id="login">Log In</button>
+                            </li>
+                            <li>
+                                <a id="UsernameDisplay"></a>
+                            </li>
+                            <li>
+                                <span class="glyphicon glyphicon-user" aria-hidden="true" id="UserPhotoPlaceholder"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header clearfix">
+                    <nav class="navbar navbar-main navbar-default">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="header_inner">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                                data-target="#main-nav" aria-expanded="false">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand logo clearfix" href="index.html"><img
+                                                    src="img/logo.svg" alt="Cut the Red Wire - FTC 6078" class="img-responsive"></a>
+                                        </div>
+                                        <div class="collapse navbar-collapse" id="main-nav">
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li class="active"><a href="index.html">Home</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">News &amp; Events</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">News Index</a></li>
+                                                        <li><a href="#">Event Index</a></li>
+                                                        <li><a href="#">Media Index</a></li>
+                                                        <li><a href="#">Calendar</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Outreach</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">FIRST Connections</a></li>
+                                                        <li><a href="#">Community Connections</a></li>
+                                                        <li><a href="#">FLL Resources</a></li>
+                                                        <li><a href="#">FTC Resources</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Helpful Links</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="https://theforgeinitiative.org/">The Forge Initiative</a></li>
+                                                        <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                                aria-haspopup="true" aria-expanded="false">FIRST</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="https://www.firstinspires.org/">FIRST</a></li>
+                                                                <li><a href="https://www.firstinspires.org/programs/ftc/game-and-season">FTC Game &amp; Season</a></li>
+                                                                <li><a href="https://ftc-events.firstinspires.org/team/6078">Team 6078 on FTC Events</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="https://ftcscout.org/teams/6078">Team 6078 on FTCScout</a></li>
+                                                        <li><a href="#">Team Documents</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                        aria-haspopup="true" aria-expanded="false">Robots</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">2025 Robot (DECODE)</a></li>
+                                                        <li><a href="#">2024 Robot - Sparky (INTO THE DEEP)</a></li>
+                                                        <li><a href="#">2023 Robot (CENTERSTAGE)</a></li>
+                                                        <li><a href="#">2022 Robot (POWERPLAY)</a></li>
+                                                        <li><a href="#">2021 Robot (FREIGHT FRENZY)</a></li>
+                                                        <li><a href="#">2020 Robot (ULTIMATE GOAL)</a></li>
+                                                        <li><a href="#">2019 Robot (SKYSTONE)</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div><!-- navbar-collapse -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.container -->
+                    </nav><!-- navbar -->
+                </div>
+            </header>
+        </div>
+
+        <!-- ===================== HERO CAROUSEL ===================== -->
+        <div class="banner carousel slide" id="recommended-item-carousel" data-ride="carousel">
+            <div class="slides carousel-inner" id="FFcarousel">
+                <div class="item active">
+                    <img src="img/hero-1.png" alt="" />
+                    <div class="banner_caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="caption_inner animated fadeInUp">
+                                        <h1>Ascend Qualifier Inspire Award Winner</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/hero-2.png" alt="" />
+                    <div class="banner_caption">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="caption_inner animated fadeInUp">
+                                        <h1><p>BIOBUZZ IS HERE!</p></h1>
+                                        <a href="https://www.firstinspires.org/programs/ftc/game-and-season">Watch the BIOBUZZ Season Reveal</a>
+                                    </div>
+                                    <!--end caption_inner-->
+                                </div>
+                            </div>
+                            <!--end row-->
+                        </div>
+                        <!--end container-->
+                    </div>
+                    <!--end banner_caption-->
+                </div>
+            </div>
+            <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                <img src="img/home/slider/prev.png" alt="">
+            </a>
+            <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                <img src="img/home/slider/next.png" alt="">
+            </a>
+        </div>
+        <!--end banner-->
+
+        <!-- ===================== INITIATIVES BAND ===================== -->
+        <div class="aboutArea">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-xs-12">
+                        <div class="aboutTitle">
+                            <h2>Cut the Red Wire Initiatives</h2>
+                        </div><!-- aboutTitle -->
+                    </div>
+                </div><!-- row clearfix -->
+                <br />
+                <div class="about_inner clearfix">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="https://theforgeinitiative.org/">
+                                    <img src="img/init-1.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>Cut the Red Wire is a team of The Forge Initiative, an open innovation tech space in Cary, NC.</p>
+                                    </div>
+                                    <span class="captionLink">The Forge Initiative<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-2.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-3.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-4.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                    </div><!-- row -->
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-5.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-6.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-7.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <div class="aboutImage">
+                                <a href="#">
+                                    <img src="img/init-8.png" alt="" class="img-responsive" />
+                                    <div class="overlay">
+                                        <p>One sentence about this program goes here.</p>
+                                    </div>
+                                    <span class="captionLink">Program Name<span></span></span>
+                                </a>
+                            </div><!-- aboutImage -->
+                        </div>
+                    </div><!-- row -->
+                    <br />
+                </div><!-- about_inner -->
+            </div><!-- container -->
+        </div><!-- aboutArea -->
+
+        <!-- ===================== MAIN CONTENT ===================== -->
+        <div class="mainContent clearfix">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-sm-7 col-xs-12">
+                        <div class="videoNine clearfix">
+                            <div class="videoArea clearfix">
+                                <h3>We Are 6078!</h3>
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-7 col-xs-12 videoLeft">
+                                        <img src="img/video.png" alt="Play team video"
+                                            data-video="https://www.youtube.com/embed/Njd7czAurPc?autoplay=1">
+                                    </div><!-- videoLeft -->
+                                    <div class="col-lg-4 col-md-5 col-xs-12 videoRight">
+                                        <p>We are <i>FIRST</i> Tech Challenge Team 6078 from Apex, North Carolina.
+                                            Cut the Red Wire has competed in FTC since 2012 as a team of
+                                            The Forge Initiative, an open innovation tech space in Cary, NC.
+                                            [Add two or three sentences here about who you are, what you build,
+                                            and what the team is known for.]</p>
+                                        <a href="#" class="btn btn-block learnBtn">Learn More</a>
+                                    </div><!-- videoRight -->
+                                </div><!-- row -->
+                            </div><!-- videoArea -->
+                            <div class="related_post_sec single_post">
+                                <h3>Recent News</h3>
+                                <div id="frogtopnews">
+                                    <ul>
+                                        <li>
+                                            <span class="rel_thumb"><a href="#"><img src="img/news-1.png" width="150" height="105" alt=""></a></span>
+                                            <div class="rel_right">
+                                                <a href="#"><h4>BIOBUZZ kickoff is Saturday, September 12 at noon ET</h4></a>
+                                                <span class="author">Posted in: <a href="#">Team News</a></span><br>
+                                                <span class="date"> on: September 10, 2026</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="rel_thumb"><a href="#"><img src="img/news-2.png" width="150" height="105" alt=""></a></span>
+                                            <div class="rel_right">
+                                                <a href="#"><h4>Innovate Award 2nd Place at the North Carolina Championship</h4></a>
+                                                <span class="author">Posted in: <a href="#">Competitions</a></span><br>
+                                                <span class="date"> on: February 22, 2026</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="rel_thumb"><a href="#"><img src="img/news-3.png" width="150" height="105" alt=""></a></span>
+                                            <div class="rel_right">
+                                                <a href="#"><h4>Cut the Red Wire wins the Inspire Award and captains the winning alliance at the Ascend Leadership Academy Qualifier</h4></a>
+                                                <span class="author">Posted in: <a href="#">Competitions</a></span><br>
+                                                <span class="date"> on: February 07, 2026</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="rel_thumb"><a href="#"><img src="img/news-4.png" width="150" height="105" alt=""></a></span>
+                                            <div class="rel_right">
+                                                <a href="#"><h4>Inspire Award 2nd Place at the Thales Academy Qualifier</h4></a>
+                                                <span class="author">Posted in: <a href="#">Competitions</a></span><br>
+                                                <span class="date"> on: January 17, 2026</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--related_post_sec-->
+                        </div>
+                        <!--videoNine-->
+                    </div><!-- col-sm-7 col-xs-12 -->
+                    <div class="col-sm-5 col-xs-12">
+                        <div class="formArea clearfix">
+                            <img src="img/forge-logo.png" alt="The Forge Initiative" class="img-responsive" />
+                            <p>&nbsp;</p>
+                            <p><h2>Join Cut the Red Wire!</h2></p>
+                            <p>
+                                <b>Students interested in joining a robotics team</b> are invited to attend our
+                                student information meeting <b>[day, date at time]</b> at <b>[location]</b>.
+                            </p>
+                            <p>
+                                New students should also complete the interest form to be added to the
+                                e-mail distribution list and invited to team meetings.
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-default btn-block commonBtn">Cut the Red Wire Interest Form</a>
+                            </p>
+                            <p>
+                                <a href="https://theforgeinitiative.org/" class="btn btn-default btn-block commonBtn">The Forge Initiative Programs</a>
+                            </p>
+                            <p>
+                                <b>For younger students,</b> [one or two sentences about FLL or other youth programs
+                                the team supports, if any].
+                            </p>
+                            <p>
+                                For more information contact <a href="#">YOUR-EMAIL@cuttheredwire.org</a>.
+                            </p>
+                        </div>
+                        <!-- formArea -->
+                    </div><!-- col-sm-5 col-xs-12 -->
+                </div><!-- row clearfix -->
+            </div><!-- container -->
+        </div><!-- mainContent -->
+
+        <!-- ===================== COUNTDOWN ===================== -->
+        <div class="count clearfix wow fadeIn paralax" data-wow-delay="100ms"
+            style="background-image: url(img/CountdownBackground.png);">
+            <div class="text-center clearfix">
+                <h1 style="color:white">Time remaining until FTC 2026 (BIOBUZZ) Kickoff</h1>
+                <div id="simple_timer"></div>
+            </div>
+        </div>
+
+        <!-- ===================== SPONSORS ===================== -->
+        <div class="brandSection clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="owl-carousel partnersLogoSlider">
+                            <div class="slide">
+                                <div class="partnersLogo clearfix">
+                                    <a href="https://www.firstinspires.org/"><img src="img/sponsor-first.png" alt="FIRST" /></a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="partnersLogo clearfix">
+                                    <a href="#"><img src="img/sponsor-metlife.png" alt="MetLife" /></a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="partnersLogo clearfix">
+                                    <a href="#"><img src="img/sponsor-acropolis.png" alt="Acropolis Engineering" /></a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="partnersLogo clearfix">
+                                    <a href="#"><img src="img/sponsor-4thvector.png" alt="4th Vector Technologies" /></a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="partnersLogo clearfix">
+                                    <a href="https://theforgeinitiative.org/"><img src="img/sponsor-forge.png" alt="The Forge Initiative" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Brand-section -->
+
+        <!-- ===================== FOOTER ===================== -->
+        <div id="bottom-bar">
+            <footer class="footer-v1">
+                <div class="menuFooter clearfix">
+                    <div class="container">
+                        <div class="row clearfix">
+                            <div class="col-sm-3 col-xs-6">
+                                <ul class="menuLink">
+                                    <li><a href="#">Team History</a></li>
+                                    <li><a href="#">Achievements</a></li>
+                                </ul>
+                            </div><!-- col-sm-3 col-xs-6 -->
+                            <div class="col-sm-3 col-xs-6 borderLeft">
+                                <ul class="menuLink">
+                                    <li><a href="#">FLL Resources</a></li>
+                                    <li><a href="#">FTC Resources</a></li>
+                                    <li><a href="#">Interest Form</a></li>
+                                </ul>
+                            </div><!-- col-sm-3 col-xs-6 -->
+                            <div class="col-sm-3 col-xs-6 borderLeft">
+                                <div class="footer-address">
+                                    <h5>Location:</h5>
+                                    <address>
+                                        Cut the Red Wire, FTC Team 6078<br />
+                                        The Forge Initiative<br />
+                                        [Street address]<br />
+                                        Cary, NC 27519
+                                    </address>
+                                    <a href="https://theforgeinitiative.org/"><span class="place"><i class="fa fa-map-marker"></i>The Forge Initiative</span></a>
+                                </div>
+                            </div><!-- col-sm-3 col-xs-6 -->
+                            <div class="col-sm-3 col-xs-6 borderLeft">
+                                <div class="socialArea">
+                                    <h5>Find us on:</h5>
+                                    <ul class="list-inline ">
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.youtube.com/playlist?list=PLtKuX8YBacazGShNOgOffqDmmbMguoSNv"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                    </ul>
+                                </div><!-- social -->
+                                <div class="contactNo">
+                                    <h5>Email us at:</h5>
+                                    <a href="#">
+                                        <h3>YOUR-EMAIL@cuttheredwire.org</h3>
+                                    </a>
+                                </div><!-- contactNo -->
+                            </div><!-- col-sm-3 col-xs-6 -->
+                        </div><!-- row -->
+                    </div><!-- container -->
+                </div><!-- menuFooter -->
+                <div class="footer clearfix">
+                    <div class="container">
+                        <div class="row clearfix">
+                            <div class="col-sm-6 col-xs-12 copyRight">
+                                <p>&copy; 2026 Copyright Cut the Red Wire <a href="index.html">FTC 6078</a></p>
+                            </div><!-- col-sm-6 col-xs-12 -->
+                            <div class="col-sm-6 col-xs-12 privacy_policy">
+                                <a href="#">Contact us</a>
+                            </div><!-- col-sm-6 col-xs-12 -->
+                        </div><!-- row clearfix -->
+                    </div><!-- container -->
+                </div><!-- footer -->
+            </footer>
+        </div>
+    </div>
+
+    <!-- JQUERY SCRIPTS -->
+    <script src="plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/pop-up/jquery.magnific-popup.js"></script>
+    <script src="plugins/animation/waypoints.min.js"></script>
+    <script src="plugins/animation/wow.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="plugins/timer/jquery.syotimer.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="367" height="100" viewBox="0 0 367 100">
+  <path d="M4 52 H 38" stroke="#c8102e" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M56 52 H 90" stroke="#c8102e" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M41 40 L 53 64 M53 40 L 41 64" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <text x="104" y="40" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="24" fill="#1c1c1c">CUT THE</text>
+  <text x="104" y="74" font-family="Arial Black, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="34" fill="#c8102e">RED WIRE</text>
+  <text x="106" y="93" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="11" letter-spacing="2" fill="#555555">FTC TEAM 6078 · APEX, NC</text>
+</svg>
