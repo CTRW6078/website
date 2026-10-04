@@ -1,11 +1,48 @@
-# Cut the Red Wire — FTC Team 6078 website
+# Cut the Red Wire · FTC Team 6078
 
-Static site for FTC Team 6078 "Cut the Red Wire" (Apex, NC). Layout is a re-theme of the
-Frog Force 503 template (Bootstrap 3, Open Sans + Roboto Slab) in red/black.
+Team website for FIRST Tech Challenge Team 6078 "Cut the Red Wire" (Apex, NC).
+Plain HTML, CSS and JavaScript. No build step, no dependencies besides two Google Fonts.
 
-Open `index.html` in a browser. No build step.
+## Run it locally
 
-- `css/default.css` — theme colors (red `#c8102e`, black `#1c1c1c`)
-- `css/ctrw.css` — the few color overrides the template hard-codes
-- `js/custom.js` — hero slider, sponsor slider, sticky header, countdown date
-- `img/` — grey placeholders sized for the layout; swap in real photos/logos
+Open `index.html` in a browser, or serve the folder:
+
+```bash
+python3 -m http.server 8503
+```
+
+Then visit http://localhost:8503.
+
+## Files
+
+- `index.html` — the whole page
+- `css/site.css` — all styles; tokens at the top
+- `js/site.js` — mobile menu, the scroll-drawn red wire, balloon-to-parts-list highlighting
+- `DESIGN.md` — the design system (fonts, colors, spacing, rules). Read it before changing the look.
+- `img/photos/` — photo placeholders
+- `img/sponsors/` — sponsor logo placeholders
+- `img/og-image.png` — the preview image shown when the link is shared
+
+## Swap in real photos
+
+Every placeholder is already at its final path. Replace the file with a real photo **using the same name** and the page picks it up. Photos are cropped to fit, so anything at or above the listed size works.
+
+| File | What to shoot | Minimum size |
+|---|---|---|
+| `img/photos/hero.jpg` | Whole team with the robot on the field. Keep faces inside the middle 4:3 area; phones crop to it. | 2400 × 1050 |
+| `img/photos/robot-render.png` | CAD render of the current robot on a dark background, robot filling the width | 1600 × 1200 |
+| `img/photos/build-design.jpg` | Someone working in CAD | 1200 × 900 |
+| `img/photos/build-fabricate.jpg` | Cut and bent aluminum plates | 1200 × 900 |
+| `img/photos/build-assemble.jpg` | Hands crimping or routing wiring | 1200 × 900 |
+| `img/photos/build-test.jpg` | Robot on the practice field | 1200 × 900 |
+| `img/photos/team.jpg` | Candid team shot in the pit | 1800 × 1200 |
+| `img/photos/outreach-featured.jpg` | Biggest outreach event | 1800 × 1200 |
+| `img/photos/outreach-2.jpg`, `outreach-3.jpg` | Other outreach programs | 1200 × 900 |
+| `img/sponsors/*.png` | Sponsor logos (SVG or PNG; if you switch to SVG, update the `src` in `index.html`) | any |
+
+## Fill in the text
+
+- Search `index.html` for `class="tbd"`. Each one is a bracketed fill-in shown in red on the page.
+- Search for `tbd-link`. Those links point at `#` or `example.org` (sponsor email, PDFs, Instagram, GitHub).
+- Robot parts list: the rows are example data. Replace them with the real parts list, then delete the `<div class="stamp">` PRELIMINARY block.
+- Robot balloons: each `<button class="balloon">` has `--x` and `--y` percentages. Move them so each number sits on its part in the render.
