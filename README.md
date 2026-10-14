@@ -30,14 +30,14 @@ Every placeholder is already at its final path. Replace the file with a real pho
 | File | What to shoot | Minimum size |
 |---|---|---|
 | `img/photos/hero.jpg` | Whole team with the robot on the field. Keep faces inside the middle 4:3 area; phones crop to it. | 2400 × 1050 |
-| `img/photos/robot-render.png` | CAD render of the current robot on a dark background, robot filling the width | 1600 × 1200 |
+| `img/photos/robot-render.jpg` | CAD render of the current robot, padded to 4:3 so nothing gets cropped | 1600 × 1200 |
 | `img/photos/build-design.jpg` | Someone working in CAD | 1200 × 900 |
 | `img/photos/build-fabricate.jpg` | Cut and bent aluminum plates | 1200 × 900 |
 | `img/photos/build-assemble.jpg` | Hands crimping or routing wiring | 1200 × 900 |
 | `img/photos/build-test.jpg` | Robot on the practice field | 1200 × 900 |
 | `img/photos/team.jpg` | Candid team shot in the pit | 1800 × 1200 |
 | `img/photos/outreach-featured.jpg` | Biggest outreach event | 1800 × 1200 |
-| `img/photos/outreach-2.jpg`, `outreach-3.jpg` | Other outreach programs | 1200 × 900 |
+| `img/photos/outreach-2.jpg` | Second outreach program | 1200 × 900 |
 | `img/sponsors/*.png` | Sponsor logos (SVG or PNG; if you switch to SVG, update the `src` in `index.html`) | any |
 
 ## Fill in the text

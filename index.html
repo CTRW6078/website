@@ -22,12 +22,10 @@
 </head>
 
 <!--
-  PLACEHOLDERS TO FILL BEFORE LAUNCH
-  - Photos: overwrite the files in img/photos/ with real photos using the same names (see README).
-  - Text: every <span class="tbd"> is a fill-in. Search this file for class="tbd".
-  - Robot parts list: rows are example data. Replace them, then delete the PRELIMINARY stamp.
-  - Sponsor logos: overwrite the files in img/sponsors/.
-  - Links: every element with class="tbd-link" points at a placeholder (# or example.org). Search for tbd-link.
+  STILL TO FILL
+  - Photos: team.jpg and the four build-*.jpg files in img/photos/ are still placeholders (see README).
+  - Sponsor logos: only MetLife has a logo file; the rest are text. Add files to img/sponsors/ to swap them in.
+  - Robot balloons: positions were placed by eye on the render; nudge --x / --y if one is off.
 -->
 
 <body>
@@ -86,7 +84,7 @@
             <div class="sheet-inner">
               <figure class="photo hero-photo">
                 <img src="img/photos/hero.jpg" width="2400" height="1050"
-                     alt="The Cut the Red Wire team with their robot on the competition field">
+                     alt="Cut the Red Wire members and MetLife STEM camp campers behind a competition field with robots">
               </figure>
 
               <div class="hero-body">
@@ -101,7 +99,7 @@
                     connector ourselves. We have been doing it since 2012.
                   </p>
                   <div class="actions">
-                    <a class="btn btn-primary" href="#robot">See the 2026–27 robot</a>
+                    <a class="btn btn-primary" href="#robot">See our robot, Rift</a>
                   </div>
                 </div>
 
@@ -149,12 +147,12 @@
       <section class="band-ink robot" id="robot" aria-labelledby="robot-title">
         <div class="wrap">
           <div class="sec-head">
-            <h2 id="robot-title" data-wire-node>2026–27 Robot</h2>
+            <h2 id="robot-title" data-wire-node>Rift · 2025–26</h2>
             <div class="sec-intro">
               <p>
-                Our robot for BIOBUZZ, the 2026–27 <em>FIRST</em> Tech Challenge game.
-                Name: <span class="tbd">robot name</span>.
-                Select a numbered balloon to find its part in the list.
+                Our robot for DECODE, the 2025–26 <em>FIRST</em> Tech Challenge game.
+                Its signature mechanism is a clutch power take-off that shifts drive power
+                to the endgame climb. Select a numbered balloon to find its subsystem in the list.
               </p>
             </div>
           </div>
@@ -167,79 +165,61 @@
                 <i class="dim-arrow dim-arrow-r"></i>
               </div>
               <div class="photo robot-photo">
-                <img src="img/photos/robot-render.png" width="1600" height="1200"
-                     alt="CAD render of the 2026–27 Cut the Red Wire robot">
+                <img src="img/photos/robot-render.jpg" width="1355" height="1016"
+                     alt="Onshape render of Rift, the 2025–26 Cut the Red Wire robot">
                 <!-- Move balloons by editing --x / --y (percent of the image) to point at each part. -->
-                <button class="balloon" type="button" style="--x:22%; --y:70%" data-item="1" aria-label="Part 1" aria-describedby="bom-1">1</button>
-                <button class="balloon" type="button" style="--x:42%; --y:36%" data-item="2" aria-label="Part 2" aria-describedby="bom-2">2</button>
-                <button class="balloon" type="button" style="--x:63%; --y:24%" data-item="3" aria-label="Part 3" aria-describedby="bom-3">3</button>
-                <button class="balloon" type="button" style="--x:74%; --y:56%" data-item="4" aria-label="Part 4" aria-describedby="bom-4">4</button>
-                <button class="balloon" type="button" style="--x:12%; --y:86%" data-item="5" aria-label="Part 5" aria-describedby="bom-5">5</button>
-                <button class="balloon" type="button" style="--x:86%; --y:80%" data-item="6" aria-label="Part 6" aria-describedby="bom-6">6</button>
+                                <button class="balloon" type="button" style="--x:21%; --y:72%" data-item="1" aria-label="Part 1" aria-describedby="bom-1">1</button>
+                <button class="balloon" type="button" style="--x:40%; --y:83%" data-item="2" aria-label="Part 2" aria-describedby="bom-2">2</button>
+                <button class="balloon" type="button" style="--x:69%; --y:55%" data-item="3" aria-label="Part 3" aria-describedby="bom-3">3</button>
+                <button class="balloon" type="button" style="--x:53%; --y:36%" data-item="4" aria-label="Part 4" aria-describedby="bom-4">4</button>
+                <button class="balloon" type="button" style="--x:32%; --y:13%" data-item="5" aria-label="Part 5" aria-describedby="bom-5">5</button>
               </div>
               <p class="robot-pick" aria-live="polite" data-robot-pick></p>
               <figcaption class="robot-caption">
-                <span>View: isometric, exploded</span>
-                <a class="link-on-ink tbd-link" href="#">Download the engineering portfolio (PDF)</a>
+                <span>View: isometric · Onshape render</span>
+                <a class="link-on-ink" href="https://www.youtube.com/@FTC6078" rel="noopener">Watch Rift on YouTube</a>
               </figcaption>
             </figure>
 
             <div class="bom">
-              <div class="stamp">Preliminary<small>Example data · replace before launch</small></div>
               <table class="table table-ink">
-                <caption class="visually-hidden">Robot parts list</caption>
+                <caption class="visually-hidden">Rift subsystems</caption>
                 <thead>
                   <tr>
                     <th scope="col">Item</th>
-                    <th scope="col">Part</th>
-                    <th scope="col">Material · process</th>
-                    <th scope="col" class="num">Qty</th>
+                    <th scope="col">Subsystem</th>
+                    <th scope="col">Notes</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr id="bom-1" data-item="1" tabindex="0">
                     <td class="mono" data-label="Item">1</td>
-                    <td data-label="Part"><span class="src src-sheet" title="Custom sheet metal"><span class="visually-hidden">Custom sheet metal: </span></span>Drivetrain side plate</td>
-                    <td data-label="Material · process">5052-H32 aluminum, 0.090 in · laser cut, bent</td>
-                    <td class="num mono" data-label="Qty">2</td>
+                    <td data-label="Subsystem">Chassis</td>
+                    <td data-label="Notes">Pocketed side plates, cut by Fabworks</td>
                   </tr>
                   <tr id="bom-2" data-item="2" tabindex="0">
                     <td class="mono" data-label="Item">2</td>
-                    <td data-label="Part"><span class="src src-sheet" title="Custom sheet metal"><span class="visually-hidden">Custom sheet metal: </span></span>Intake bracket</td>
-                    <td data-label="Material · process">5052-H32 aluminum, 0.063 in · laser cut, bent</td>
-                    <td class="num mono" data-label="Qty">4</td>
+                    <td data-label="Subsystem">Drivetrain and PTO climb</td>
+                    <td data-label="Notes">A clutch PTO shifts drive power to the endgame climb</td>
                   </tr>
                   <tr id="bom-3" data-item="3" tabindex="0">
                     <td class="mono" data-label="Item">3</td>
-                    <td data-label="Part"><span class="src src-sheet" title="Custom sheet metal"><span class="visually-hidden">Custom sheet metal: </span></span>Lift carriage plate</td>
-                    <td data-label="Material · process">6061-T6 aluminum, 0.125 in · laser cut, tapped</td>
-                    <td class="num mono" data-label="Qty">1</td>
+                    <td data-label="Subsystem">Intake</td>
+                    <td data-label="Notes">Multi-roller intake for artifacts</td>
                   </tr>
                   <tr id="bom-4" data-item="4" tabindex="0">
                     <td class="mono" data-label="Item">4</td>
-                    <td data-label="Part"><span class="src src-shop" title="Made in-house"><span class="visually-hidden">Made in-house: </span></span>Electronics plate</td>
-                    <td data-label="Material · process">Polycarbonate, 0.093 in · routed in-house</td>
-                    <td class="num mono" data-label="Qty">1</td>
+                    <td data-label="Subsystem">Launcher</td>
+                    <td data-label="Notes">Scores artifacts into the goal</td>
                   </tr>
                   <tr id="bom-5" data-item="5" tabindex="0">
                     <td class="mono" data-label="Item">5</td>
-                    <td data-label="Part"><span class="src src-cots" title="Purchased"><span class="visually-hidden">Purchased: </span></span>Mecanum wheel, 104 mm</td>
-                    <td data-label="Material · process">Purchased</td>
-                    <td class="num mono" data-label="Qty">4</td>
-                  </tr>
-                  <tr id="bom-6" data-item="6" tabindex="0">
-                    <td class="mono" data-label="Item">6</td>
-                    <td data-label="Part"><span class="src src-shop" title="Made in-house"><span class="visually-hidden">Made in-house: </span></span>Wiring harness</td>
-                    <td data-label="Material · process">Silicone wire · crimped and routed in-house</td>
-                    <td class="num mono" data-label="Qty">1</td>
+                    <td data-label="Subsystem">Vision</td>
+                    <td data-label="Notes">Limelight camera on the top mast</td>
                   </tr>
                 </tbody>
               </table>
-              <ul class="legend">
-                <li><span class="src src-sheet"></span>Custom sheet metal</li>
-                <li><span class="src src-shop"></span>Made in-house</li>
-                <li><span class="src src-cots"></span>Purchased</li>
-              </ul>
+              <p class="bom-tools">Designed in Onshape · autonomous paths with Pedro Pathing · plates by Fabworks</p>
             </div>
           </div>
         </div>
@@ -252,7 +232,7 @@
             <h2 id="record-title" data-wire-node>Competition record</h2>
             <div class="sec-intro">
               <p>
-                Every award from the last two seasons, taken from <em>FIRST</em>’s official event results.
+                Every award at official events from the last four seasons.
                 Rank is our qualification ranking out of the teams at that event.
               </p>
               <p class="sec-links">
@@ -276,7 +256,7 @@
               <tbody>
                 <tr class="season-row">
                   <th scope="rowgroup" colspan="4">
-                    <span class="season-name">2025–26 · DECODE</span>
+                    <span class="season-name">2025–26 · DECODE · Robot: Rift</span>
                     <span class="season-meta mono">13 W · 9 L · 0 T</span>
                   </th>
                 </tr>
@@ -301,7 +281,7 @@
 
                 <tr class="season-row">
                   <th scope="rowgroup" colspan="4">
-                    <span class="season-name">2024–25 · INTO THE DEEP · Robot: Sparky</span>
+                    <span class="season-name">2024–25 · INTO THE DEEP · Robots: Keystone and Cornerstone</span>
                     <span class="season-meta mono">15 W · 15 L · 1 T</span>
                   </th>
                 </tr>
@@ -328,6 +308,56 @@
                   <td data-label="Event">Thales Academy Rolesville</td>
                   <td data-label="Result">Motivate Award · Winning Alliance, 1st team selected</td>
                   <td class="num mono" data-label="Rank">3 / 24</td>
+                </tr>
+
+                <tr class="season-row">
+                  <th scope="rowgroup" colspan="4">
+                    <span class="season-name">2023–24 · CENTERSTAGE · Robots: Valley, Peak and Summit</span>
+                    <span class="season-meta mono">19 W · 6 L · 0 T</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2024-02-24</td>
+                  <td data-label="Event">North Carolina State Championship</td>
+                  <td data-label="Result">Think Award</td>
+                  <td class="num mono" data-label="Rank">10 / 36</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2024-02-03</td>
+                  <td data-label="Event">Southern Guilford High School Qualifier</td>
+                  <td data-label="Result">Think Award · Finalist Alliance Captain</td>
+                  <td class="num mono" data-label="Rank">1 / 24</td>
+                </tr>
+                <tr class="is-top">
+                  <td class="mono" data-label="Date">2024-01-14</td>
+                  <td data-label="Event">Ascend Leadership Academy Qualifier</td>
+                  <td data-label="Result"><strong>Inspire Award</strong> · Winning Alliance Captain · Innovate Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">1 / 16</td>
+                </tr>
+
+                <tr class="season-row">
+                  <th scope="rowgroup" colspan="4">
+                    <span class="season-name">2022–23 · POWERPLAY · Robot: Lightning McQueen</span>
+                    <span class="season-meta mono">11 W · 9 L · 1 T</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2023-02-18</td>
+                  <td data-label="Event">North Carolina State Championship</td>
+                  <td data-label="Result">Think Award · Inspire Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">21 / 38</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2023-01-28</td>
+                  <td data-label="Event">Ascend Leadership Academy Qualifier</td>
+                  <td data-label="Result">Innovate Award</td>
+                  <td class="num mono" data-label="Rank">5 / 16</td>
+                </tr>
+                <tr class="is-top">
+                  <td class="mono" data-label="Date">2023-01-14</td>
+                  <td data-label="Event">JM Alexander Middle School Qualifier</td>
+                  <td data-label="Result"><strong>Inspire Award</strong> · Finalist Alliance Captain · Control Award, 2nd place · Design Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">2 / 20</td>
                 </tr>
               </tbody>
             </table>
@@ -357,7 +387,7 @@
               <div class="op-code mono">OP 10</div>
               <div class="op-text">
                 <h3>Design</h3>
-                <p>Every part starts as a CAD model in <span class="tbd">CAD tool</span>. We check fit and clearance in the full robot assembly before anything gets cut.</p>
+                <p>Every part starts as a CAD model in Onshape. We check fit and clearance in the full robot assembly before anything gets cut.</p>
               </div>
               <div class="op-wc"><span class="op-wc-label">Work center</span>CAD workstation</div>
               <figure class="photo op-photo"><img src="img/photos/build-design.jpg" width="1200" height="900" alt="A student designing a robot part in CAD" loading="lazy"></figure>
@@ -384,7 +414,7 @@
               <div class="op-code mono">OP 40</div>
               <div class="op-text">
                 <h3>Test and drive</h3>
-                <p>The robot goes on the practice field as early as we can get it there. Driver practice finds problems that CAD can’t.</p>
+                <p>The robot goes on the practice field as early as we can get it there. Driver practice finds problems that CAD can’t, and we tune our autonomous paths with Pedro Pathing.</p>
               </div>
               <div class="op-wc"><span class="op-wc-label">Work center</span>Practice field</div>
               <figure class="photo op-photo"><img src="img/photos/build-test.jpg" width="1200" height="900" alt="The robot running on the practice field" loading="lazy"></figure>
@@ -402,13 +432,29 @@
               Cut the Red Wire is a <em>FIRST</em> Tech Challenge team from Apex, North Carolina.
               We have competed every season since 2012.
             </p>
-            <p><span class="tbd">Two or three sentences: how many students, which grades, how the team splits up the work, and what you are proudest of.</span></p>
+            <p>We build out of <a href="https://apexmakerclub.org/" rel="noopener">Apex Maker Club</a>, a nonprofit maker space in Apex. Our ten students split into programming, CAD, mechanical, electrical and outreach subteams, each with a student lead.</p>
             <dl class="facts">
               <div><dt>Founded</dt><dd class="mono">2012</dd></div>
               <div><dt>Based in</dt><dd>Apex, NC</dd></div>
-              <div><dt>Students</dt><dd><span class="tbd">number</span></dd></div>
-              <div><dt>Mentors</dt><dd><span class="tbd">number</span></dd></div>
+              <div><dt>Students</dt><dd class="mono">10</dd></div>
+              <div><dt>Home base</dt><dd>Apex Maker Club</dd></div>
             </dl>
+            <table class="table roster">
+              <caption class="visually-hidden">2026–27 roster</caption>
+              <thead><tr><th scope="col">Name</th><th scope="col">Role</th></tr></thead>
+              <tbody>
+                <tr><td>Ishanth</td><td>Programming lead</td></tr>
+                <tr><td>Vedanth</td><td>CAD lead</td></tr>
+                <tr><td>Ben</td><td>Mechanical lead</td></tr>
+                <tr><td>Aarit</td><td>Electrical lead</td></tr>
+                <tr><td>Reena</td><td>Mechanical and outreach lead</td></tr>
+                <tr><td>Ansh</td><td>Programming</td></tr>
+                <tr><td>Karthik</td><td>Programming</td></tr>
+                <tr><td>Varun</td><td>Programming and outreach</td></tr>
+                <tr><td>Keshav</td><td>Mechanical</td></tr>
+                <tr><td>Vaibhavi</td><td>Outreach</td></tr>
+              </tbody>
+            </table>
           </div>
           <figure class="photo team-photo">
             <img src="img/photos/team.jpg" width="1800" height="1200" alt="The team working in the pit at an event" loading="lazy">
@@ -422,25 +468,25 @@
           <div class="sec-head">
             <h2 id="outreach-title" data-wire-node>Outreach</h2>
             <div class="sec-intro">
-              <p><span class="tbd">One sentence on why the team does outreach and who it reaches.</span></p>
+              <p>We want more kids in our community to get their hands on a robot, so we teach STEM through a summer camp, workshops and demos.</p>
             </div>
           </div>
 
           <div class="outreach-grid">
             <article class="story story-lead">
-              <figure class="photo"><img src="img/photos/outreach-featured.jpg" width="1800" height="1200" alt="Team members running an outreach event" loading="lazy"></figure>
-              <h3><span class="tbd">Biggest outreach program</span></h3>
-              <p><span class="tbd">What it is, who it serves, how often you run it, and one number that shows its size.</span></p>
+              <figure class="photo"><img src="img/photos/outreach-featured.jpg" width="1800" height="1200" alt="MetLife STEM camp campers in Cut the Red Wire shirts gathered behind a competition field" loading="lazy"></figure>
+              <h3>MetLife STEM Camp</h3>
+              <p>Every year we host a week-long STEM camp for 20 campers. Our members teach engineering, coding and robotics hands-on, with the team’s robots on a full field.</p>
             </article>
             <article class="story">
-              <figure class="photo"><img src="img/photos/outreach-2.jpg" width="1200" height="900" alt="A second outreach program in action" loading="lazy"></figure>
-              <h3><span class="tbd">Second program</span></h3>
-              <p><span class="tbd">One or two sentences.</span></p>
+              <figure class="photo"><img src="img/photos/outreach-2.jpg" width="1200" height="900" alt="Team members running a robot demo for kids seated around a small course" loading="lazy"></figure>
+              <h3>Community STEM workshops</h3>
+              <p>We bring robots to local schools and community centers and run hands-on demos and activities for younger students.</p>
             </article>
             <article class="story">
-              <figure class="photo"><img src="img/photos/outreach-3.jpg" width="1200" height="900" alt="A third outreach program in action" loading="lazy"></figure>
-              <h3><span class="tbd">Third program</span></h3>
-              <p><span class="tbd">One or two sentences.</span></p>
+              <h3>A visit from Wiley Nickel</h3>
+              <p>In February 2025, former U.S. Representative Wiley Nickel met with the team to hear about our STEM work and our plans for a robotics camp for underprivileged youth in North Carolina.</p>
+              <p><a href="https://www.linkedin.com/posts/wiley-nickel-4a7266_honored-to-join-ftc-robotics-team-cut-the-ugcPost-7298814447463108609-HuHM/" rel="noopener">Read his post on LinkedIn</a></p>
             </article>
           </div>
         </div>
@@ -458,18 +504,17 @@
                 a week making by hand show up cut, bent, and ready to bolt on.
               </p>
               <div class="actions">
-                <a class="btn btn-primary tbd-link" href="mailto:team-email@example.org?subject=Sponsoring%20FTC%206078">Email us about sponsoring</a>
-                <a class="btn btn-secondary tbd-link" href="#">Download the sponsor packet (PDF)</a>
+                <a class="btn btn-primary" href="mailto:6078ctrw@gmail.com?subject=Sponsoring%20FTC%206078">Email us about sponsoring</a>
               </div>
             </div>
 
             <div class="ledger" role="group" aria-labelledby="ledger-title">
               <h3 class="ledger-title" id="ledger-title">Where the money goes</h3>
               <dl>
-                <div><dt>Parts and materials</dt><dd class="mono"><span class="tbd">%</span></dd></div>
-                <div><dt>Competition registration</dt><dd class="mono"><span class="tbd">%</span></dd></div>
-                <div><dt>Travel to events</dt><dd class="mono"><span class="tbd">%</span></dd></div>
-                <div><dt>Outreach programs</dt><dd class="mono"><span class="tbd">%</span></dd></div>
+                <div><dt>Parts and materials</dt><dd>Fabworks plates, goBILDA hardware</dd></div>
+                <div><dt>Competition registration</dt><dd>Qualifiers and championships</dd></div>
+                <div><dt>Travel to events</dt><dd>Out-of-state premier events</dd></div>
+                <div><dt>Outreach programs</dt><dd>MetLife STEM camp, workshops</dd></div>
               </dl>
             </div>
           </div>
@@ -477,9 +522,13 @@
           <h3 class="sponsors-title">Our sponsors</h3>
           <ul class="sponsor-logos">
             <li><img src="img/sponsors/metlife.png" width="600" height="240" alt="MetLife" loading="lazy"></li>
-            <li><img src="img/sponsors/acropolis-engineering.png" width="600" height="240" alt="Acropolis Engineering" loading="lazy"></li>
-            <li><img src="img/sponsors/4th-vector.png" width="600" height="240" alt="4th Vector Technologies" loading="lazy"></li>
-            <li class="logo-open"><a class="tbd-link" href="mailto:team-email@example.org?subject=Sponsoring%20FTC%206078">This spot is open.<span>Email us about sponsoring</span></a></li>
+            <li class="logo-text">goBILDA</li>
+            <li class="logo-text">Fidelity</li>
+            <li class="logo-text">Polymaker</li>
+            <li class="logo-text">Best Brains</li>
+            <li class="logo-text">AB Photos</li>
+            <li class="logo-text">Stemarga</li>
+            <li class="logo-open"><a href="mailto:6078ctrw@gmail.com?subject=Sponsoring%20FTC%206078">This spot is open.<span>Email us about sponsoring</span></a></li>
           </ul>
         </div>
       </section>
@@ -497,7 +546,7 @@
           </div>
           <div class="fb-cell">
             <span class="fb-label">Contact</span>
-            <a class="tbd-link" href="mailto:team-email@example.org"><span class="tbd">team email</span></a>
+            <a href="mailto:6078ctrw@gmail.com">6078ctrw@gmail.com</a>
           </div>
           <div class="fb-cell">
             <span class="fb-label">Location</span>
@@ -506,9 +555,9 @@
           <div class="fb-cell">
             <span class="fb-label">Follow</span>
             <ul class="fb-links">
-              <li><a href="https://www.youtube.com/playlist?list=PLtKuX8YBacazGShNOgOffqDmmbMguoSNv" rel="noopener">YouTube</a></li>
-              <li><a class="tbd-link" href="#">Instagram <span class="tbd">link</span></a></li>
-              <li><a class="tbd-link" href="#">GitHub <span class="tbd">link</span></a></li>
+              <li><a href="https://www.youtube.com/@FTC6078" rel="noopener">YouTube</a></li>
+              <li><a href="https://www.instagram.com/6078.ftc/" rel="noopener">Instagram</a></li>
+              <li><a href="https://github.com/CTRW6078" rel="noopener">GitHub</a></li>
             </ul>
           </div>
           <div class="fb-cell">

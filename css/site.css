@@ -827,3 +827,9 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0ms !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- content additions ---------- */
+.bom-tools { margin-top: 16px; font: 400 0.8125rem/1.5 var(--mono); color: var(--muted-ink); }
+.roster { margin-top: 32px; }
+.ledger dd { text-align: right; color: var(--muted); }
+.sponsor-logos .logo-text { font-weight: 700; font-stretch: 112%; font-size: 1.25rem; letter-spacing: -0.01em; text-align: center; }
