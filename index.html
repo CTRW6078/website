@@ -14,16 +14,15 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <script>document.documentElement.className += " js";</script>
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&display=swap">
   <link rel="stylesheet" href="css/site.css">
 </head>
 
 <!--
   STILL TO FILL
-  - Photos: team.jpg and the four build-*.jpg files in img/photos/ are still placeholders (see README).
   - Sponsor logos: only MetLife has a logo file; the rest are text. Add files to img/sponsors/ to swap them in.
   - Robot balloons: positions were placed by eye on the render; nudge --x / --y if one is off.
 -->
@@ -34,10 +33,7 @@
   <header class="site-header" data-header>
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Cut the Red Wire, FTC Team 6078, home">
-        <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true">
-          <path d="M2 14 H10 L12.5 11.5" />
-          <path d="M15.5 16.5 L18 14 H26" />
-        </svg>
+        <img class="brand-mark" src="img/logo.png" width="326" height="400" alt="">
         <span class="brand-name">Cut the <b>Red Wire</b></span>
         <span class="brand-num">6078</span>
       </a>
@@ -51,8 +47,7 @@
         <ul>
           <li><a href="#robot">Robot</a></li>
           <li><a href="#record">Record</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#team">Team</a></li>
+                    <li><a href="#team">Team</a></li>
           <li><a href="#outreach">Outreach</a></li>
           <li><a href="#sponsor">Sponsors</a></li>
         </ul>
@@ -74,13 +69,6 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="wrap">
           <div class="sheet">
-            <div class="sheet-zones sheet-zones-x" aria-hidden="true">
-              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
-            </div>
-            <div class="sheet-zones sheet-zones-y" aria-hidden="true">
-              <span>A</span><span>B</span><span>C</span><span>D</span>
-            </div>
-
             <div class="sheet-inner">
               <figure class="photo hero-photo">
                 <img src="img/photos/hero.jpg" width="2400" height="1050"
@@ -128,13 +116,9 @@
                     <dt>Latest award</dt>
                     <dd>Inspire Award · Ascend Leadership Academy Qualifier · <span class="mono">2026-02-07</span></dd>
                   </div>
-                  <div class="tb-cell">
+                  <div class="tb-cell tb-wide">
                     <dt>Season</dt>
                     <dd>2026–27 BIOBUZZ</dd>
-                  </div>
-                  <div class="tb-cell">
-                    <dt>Sheet</dt>
-                    <dd class="mono">1 of 6</dd>
                   </div>
                 </dl>
               </div>
@@ -177,7 +161,6 @@
               <p class="robot-pick" aria-live="polite" data-robot-pick></p>
               <figcaption class="robot-caption">
                 <span>View: isometric · Onshape render</span>
-                <a class="link-on-ink" href="https://www.youtube.com/@FTC6078" rel="noopener">Watch Rift on YouTube</a>
               </figcaption>
             </figure>
 
@@ -238,6 +221,7 @@
               <p class="sec-links">
                 <a href="https://ftc-events.firstinspires.org/team/6078" rel="noopener">Full history on FTC Events</a>
                 <a href="https://ftcscout.org/teams/6078" rel="noopener">Match stats on FTCScout</a>
+                <a href="https://www.youtube.com/@FTC6078" rel="noopener">Videos on YouTube</a>
               </p>
             </div>
           </div>
@@ -365,65 +349,7 @@
         </div>
       </section>
 
-      <!-- ============ SHEET 4 · PROCESS ============ -->
-      <section class="section process" id="process" aria-labelledby="process-title">
-        <div class="wrap">
-          <div class="sec-head">
-            <h2 id="process-title" data-wire-node>How a part gets made</h2>
-            <div class="sec-intro">
-              <p>
-                Every custom part on the robot goes through the same four operations.
-                This is our routing sheet, the same kind of traveler a machine shop
-                sends along with a job.
-              </p>
-            </div>
-          </div>
-
-          <div class="routing-head" aria-hidden="true">
-            <span>Op</span><span>Operation</span><span>Work center</span><span>Photo</span>
-          </div>
-          <ol class="routing">
-            <li class="op">
-              <div class="op-code mono">OP 10</div>
-              <div class="op-text">
-                <h3>Design</h3>
-                <p>Every part starts as a CAD model in Onshape. We check fit and clearance in the full robot assembly before anything gets cut.</p>
-              </div>
-              <div class="op-wc"><span class="op-wc-label">Work center</span>CAD workstation</div>
-              <figure class="photo op-photo"><img src="img/photos/build-design.jpg" width="1200" height="900" alt="A student designing a robot part in CAD" loading="lazy"></figure>
-            </li>
-            <li class="op">
-              <div class="op-code mono">OP 20</div>
-              <div class="op-text">
-                <h3>Cut and bend</h3>
-                <p>We get our custom plates and brackets cut from sheet aluminum by <a href="https://www.fabworks.com/" rel="noopener">Fabworks</a>, then bent and tapped. Sending out the cutting gives us back build time for assembly and driver practice.</p>
-              </div>
-              <div class="op-wc"><span class="op-wc-label">Work center</span>Fabworks</div>
-              <figure class="photo op-photo"><img src="img/photos/build-fabricate.jpg" width="1200" height="900" alt="Laser-cut and bent aluminum robot plates" loading="lazy"></figure>
-            </li>
-            <li class="op">
-              <div class="op-code mono">OP 30</div>
-              <div class="op-text">
-                <h3>Assemble and wire</h3>
-                <p>Students assemble every subsystem and build the wiring harness by hand, crimping and routing each connection.</p>
-              </div>
-              <div class="op-wc"><span class="op-wc-label">Work center</span>Assembly bench</div>
-              <figure class="photo op-photo"><img src="img/photos/build-assemble.jpg" width="1200" height="900" alt="Hands crimping the robot's wiring harness" loading="lazy"></figure>
-            </li>
-            <li class="op">
-              <div class="op-code mono">OP 40</div>
-              <div class="op-text">
-                <h3>Test and drive</h3>
-                <p>The robot goes on the practice field as early as we can get it there. Driver practice finds problems that CAD can’t, and we tune our autonomous paths with Pedro Pathing.</p>
-              </div>
-              <div class="op-wc"><span class="op-wc-label">Work center</span>Practice field</div>
-              <figure class="photo op-photo"><img src="img/photos/build-test.jpg" width="1200" height="900" alt="The robot running on the practice field" loading="lazy"></figure>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- ============ SHEET 5 · TEAM ============ -->
+      <!-- ============ SHEET 4 · TEAM ============ -->
       <section class="section team" id="team" aria-labelledby="team-title">
         <div class="wrap team-grid">
           <div class="team-text">
@@ -457,35 +383,55 @@
             </table>
           </div>
           <figure class="photo team-photo">
-            <img src="img/photos/team.jpg" width="1800" height="1200" alt="The team working in the pit at an event" loading="lazy">
+            <img src="img/photos/team.jpg" width="1800" height="1200" alt="Team members in Cut the Red Wire hoodies watching their DECODE robot on the practice field" loading="lazy">
           </figure>
         </div>
       </section>
 
-      <!-- ============ SHEET 6 · OUTREACH ============ -->
+      <!-- ============ SHEET 5 · OUTREACH ============ -->
       <section class="section outreach" id="outreach" aria-labelledby="outreach-title">
         <div class="wrap">
           <div class="sec-head">
             <h2 id="outreach-title" data-wire-node>Outreach</h2>
             <div class="sec-intro">
-              <p>We want more kids in our community to get their hands on a robot, so we teach STEM through a summer camp, workshops and demos.</p>
+              <p>We want more kids to get their hands on a robot, especially kids who don’t usually get the chance. We run camps and workshops, and work with local leaders to open up more STEM opportunities for underprivileged youth.</p>
             </div>
           </div>
 
           <div class="outreach-grid">
             <article class="story story-lead">
-              <figure class="photo"><img src="img/photos/outreach-featured.jpg" width="1800" height="1200" alt="MetLife STEM camp campers in Cut the Red Wire shirts gathered behind a competition field" loading="lazy"></figure>
+              <figure class="photo"><img src="img/photos/outreach-featured.jpg" width="2000" height="1501" alt="MetLife STEM camp campers in Cut the Red Wire shirts gathered behind a competition field" loading="lazy"></figure>
               <h3>MetLife STEM Camp</h3>
               <p>Every year we host a week-long STEM camp for 20 campers. Our members teach engineering, coding and robotics hands-on, with the team’s robots on a full field.</p>
             </article>
             <article class="story">
-              <figure class="photo"><img src="img/photos/outreach-2.jpg" width="1200" height="900" alt="Team members running a robot demo for kids seated around a small course" loading="lazy"></figure>
-              <h3>Community STEM workshops</h3>
-              <p>We bring robots to local schools and community centers and run hands-on demos and activities for younger students.</p>
+              <figure class="photo"><img src="img/photos/outreach-2.jpg" width="2000" height="1499" alt="Kids seated around a small course watching team members demo robot cars" loading="lazy"></figure>
+              <h3>Purpose Learning Lab camps</h3>
+              <p>We run hands-on robotics sessions for underprivileged youth at Purpose Learning Lab’s camps.</p>
             </article>
             <article class="story">
-              <h3>A visit from Wiley Nickel</h3>
-              <p>In February 2025, former U.S. Representative Wiley Nickel met with the team to hear about our STEM work and our plans for a robotics camp for underprivileged youth in North Carolina.</p>
+              <figure class="photo"><img src="img/photos/outreach-pll.jpg" width="1600" height="1200" alt="Team members in suits talking with Purpose Learning Lab staff, who is holding a small robot car" loading="lazy"></figure>
+              <h3>Growing the partnership</h3>
+              <p>We meet with Purpose Learning Lab to plan more STEM opportunities for the kids at their camps.</p>
+            </article>
+          </div>
+
+          <h3 class="leaders-title">Working with community leaders</h3>
+          <div class="leaders-grid">
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-budd.jpg" width="1800" height="1349" alt="Six team members in suits with Rift in a U.S. Senate office" loading="lazy"></figure>
+              <h3>Senator Ted Budd’s office</h3>
+              <p>We brought Rift to Senator Ted Budd’s office and met with his staff about creating STEM opportunities for underprivileged youth.</p>
+            </article>
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-rao.jpg" width="1704" height="1278" alt="Team members and young students gathered around a robot demo at Best Brains" loading="lazy"></figure>
+              <h3>Steve Rao at Best Brains</h3>
+              <p>We demoed our robot for Steve Rao and a room of students at Best Brains, and talked about bringing STEM to more kids at camps like Purpose Learning Lab.</p>
+            </article>
+            <article class="story">
+              <blockquote class="quote-panel"><p>“Honored to join FTC robotics team, Cut The Red Wire”</p><cite>Wiley Nickel, February 2025</cite></blockquote>
+              <h3>Former Rep. Wiley Nickel</h3>
+              <p>Former U.S. Representative Wiley Nickel met with the team to hear about our STEM work and our plans for a robotics camp for underprivileged youth.</p>
               <p><a href="https://www.linkedin.com/posts/wiley-nickel-4a7266_honored-to-join-ftc-robotics-team-cut-the-ugcPost-7298814447463108609-HuHM/" rel="noopener">Read his post on LinkedIn</a></p>
             </article>
           </div>
@@ -540,6 +486,7 @@
       <div class="wrap">
         <div class="footer-block">
           <div class="fb-cell fb-name">
+            <img class="fb-logo" src="img/logo.png" width="326" height="400" alt="">
             <span class="fb-label">Team</span>
             <span class="fb-title">Cut the <b>Red Wire</b></span>
             <span class="mono">FTC 6078 · Apex, NC</span>
@@ -568,8 +515,8 @@
             </ul>
           </div>
           <div class="fb-cell fb-meta">
-            <span class="fb-label">Drawing</span>
-            <span class="mono">CTRW-6078-WEB · Rev 2026.10</span>
+            <span class="fb-label">Apex Maker Club</span>
+            <a href="https://apexmakerclub.org/" rel="noopener">apexmakerclub.org</a>
             <span class="mono">© 2026 Cut the Red Wire</span>
           </div>
         </div>

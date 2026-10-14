@@ -22,7 +22,7 @@ colors:
   error: "#B3200F"
 typography:
   display:
-    fontFamily: Archivo
+    fontFamily: Geist
     fontWeight: 800
     fontStretch: 75%
     fontSize: clamp(2.75rem, 7.2vw, 5.5rem)
@@ -30,33 +30,33 @@ typography:
     letterSpacing: -0.005em
     textTransform: uppercase
   heading:
-    fontFamily: Archivo
+    fontFamily: Geist
     fontWeight: 800
     fontStretch: 75%
     fontSize: clamp(2rem, 4.2vw, 3.25rem)
     lineHeight: 0.95
     textTransform: uppercase
   subheading:
-    fontFamily: Archivo
+    fontFamily: Geist
     fontWeight: 700
     fontStretch: 100%
     fontSize: 1.375rem
     lineHeight: 1.2
   body:
-    fontFamily: Archivo
+    fontFamily: Geist
     fontWeight: 400
     fontStretch: 100%
     fontSize: 1.0625rem
     lineHeight: 1.6
   label:
-    fontFamily: Archivo
+    fontFamily: Geist
     fontWeight: 600
     fontStretch: 112%
     fontSize: 0.75rem
     letterSpacing: 0.06em
     textTransform: uppercase
   mono:
-    fontFamily: JetBrains Mono
+    fontFamily: Geist Mono
     fontWeight: 500
     fontSize: 0.875rem
     fontFeature: tnum
@@ -130,9 +130,9 @@ Red text on paper uses `primary-text` (#B3200F) because safety red fails AA at s
 
 ## Typography
 
-Source world: engineering drawings, industrial signage, part labels. Archivo is a grotesque built for both display and long text, and its width axis (62–125%) lets one family play three roles: condensed 75% for display and section headings, normal 100% for body, expanded 112% for title-block field labels. JetBrains Mono carries anything a machinist would read: part numbers, dates, dimensions, quantities, with tabular figures.
+Source world: engineering drawings, industrial signage, part labels. Geist (sans) carries display, headings, body and labels; Geist Mono carries numbers, dates and part codes. Section headings are sentence case with tight tracking; only the hero title and small labels are uppercase. (Switched from Archivo + JetBrains Mono in 2026-10 for a cleaner look; any fontStretch values above no longer apply.)
 
-Loading: Google Fonts CSS2, `Archivo:wdth,wght@62..125,100..900` and `JetBrains+Mono:wght@400..700`, `display=swap`, with `preconnect` to fonts.gstatic.com. Both OFL, verified 2026-10-04.
+Loading: Google Fonts CSS2, `Geist:wght@400..800` and `Geist+Mono:wght@400..600`, `display=swap`, with `preconnect` to fonts.gstatic.com. Both OFL, verified 2026-10-04.
 
 Scale: display 5.5rem max, section heading 3.25rem max, subheading 1.375rem, body 1.0625rem, label 0.75rem. Headings are uppercase only at display and section level. Nothing else is uppercase except labels.
 
@@ -155,7 +155,7 @@ Square. Radius 0 on containers, tables, images. 2px on buttons and inputs so the
 ## Components
 
 - **Buttons.** Primary: red fill, white text, 2px radius, label-style text at 0.8125rem/650 (one step larger than labels so it reads as an action). Hover darkens to `primary-hover`. Focus-visible: 2px ink outline offset 3px. Secondary: transparent with 2px ink border; hover fills ink, text paper. Every button names its outcome ("See the 2026–27 robot", "Email us about sponsoring"), never "Learn more".
-- **Title block.** White sheet, ink border, grid of field cells. Each cell: label (Archivo 112%, 0.75rem) over value (mono or body).
+- **Title block.** White sheet, ink border, grid of field cells. Each cell: label (Geist 112%, 0.75rem) over value (mono or body).
 - **Tables (record, parts list).** 2px ink top rule, 1px `line` row rules, label-style headers, mono for dates and quantities. On mobile, rows stack into label/value pairs.
 - **Balloons.** 32px circles, white fill, 2px ink border, mono numeral, with a 1px leader line to the part. Hover or focus a balloon highlights its parts-list row and vice versa.
 - **Photo frames.** Fixed aspect ratio, `object-fit: cover`, 1px ink border, small corner crop marks. Placeholders are real image files at the final path, so swapping a photo means overwriting one file.
@@ -185,7 +185,7 @@ Square. Radius 0 on containers, tables, images. 2px on buttons and inputs so the
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-10-04 | Initial design system created, replacing the Frog Force 503 Bootstrap clone | Created by /design-consultation for a Fabworks sponsorship application. Research: Fabworks site plus four top FIRST team sites showed a low category bar. Memorable thing: "this team builds like a real engineering shop, with a red wire running through all of it." |
-| 2026-10-04 | Archivo (variable width) + JetBrains Mono | One family covers display, body and labels via the width axis; mono for machinist-readable data. Both verified OFL on Google Fonts. |
+| 2026-10-04 | Geist (variable width) + Geist Mono | One family covers display, body and labels via the width axis; mono for machinist-readable data. Both verified OFL on Google Fonts. |
 | 2026-10-04 | Safety red #DA291C with #B3200F for small text | ANSI Z535 safety red ties the name to real danger labeling; contrast check showed #DA291C fails AA for small text. |
 | 2026-10-04 | Outside design voices and AI mockups skipped | User not available mid-task; the built page on localhost serves as the preview. |
 | 2026-10-04 | /design-review pass: nav collapses below 1100px, parts list stacks on phones, red narrowed, breakpoints and spacing documented as built | Header crowded at 900–1099px; Claude reviewer found the parts list unusable at 360px and red used for nav state and highlights. Spec updated to match the shipped values rather than churn every spacing value. |

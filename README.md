@@ -17,6 +17,7 @@ Then visit http://localhost:8503.
 
 - `index.html` — the whole page
 - `css/site.css` — all styles; tokens at the top
+- `img/logo.png`, `img/favicon.png` — team logo
 - `js/site.js` — mobile menu, the scroll-drawn red wire, balloon-to-parts-list highlighting
 - `DESIGN.md` — the design system (fonts, colors, spacing, rules). Read it before changing the look.
 - `img/photos/` — photo placeholders
@@ -31,11 +32,8 @@ Every placeholder is already at its final path. Replace the file with a real pho
 |---|---|---|
 | `img/photos/hero.jpg` | Whole team with the robot on the field. Keep faces inside the middle 4:3 area; phones crop to it. | 2400 × 1050 |
 | `img/photos/robot-render.jpg` | CAD render of the current robot, padded to 4:3 so nothing gets cropped | 1600 × 1200 |
-| `img/photos/build-design.jpg` | Someone working in CAD | 1200 × 900 |
-| `img/photos/build-fabricate.jpg` | Cut and bent aluminum plates | 1200 × 900 |
-| `img/photos/build-assemble.jpg` | Hands crimping or routing wiring | 1200 × 900 |
-| `img/photos/build-test.jpg` | Robot on the practice field | 1200 × 900 |
-| `img/photos/team.jpg` | Candid team shot in the pit | 1800 × 1200 |
+| `img/photos/team.jpg` | Candid team shot | 1800 × 1200 |
+| `img/photos/outreach-pll.jpg`, `outreach-budd.jpg`, `outreach-rao.jpg` | Purpose Learning Lab, Senator Budd’s office, Steve Rao visit | 1200 × 900 |
 | `img/photos/outreach-featured.jpg` | Biggest outreach event | 1800 × 1200 |
 | `img/photos/outreach-2.jpg` | Second outreach program | 1200 × 900 |
 | `img/sponsors/*.png` | Sponsor logos (SVG or PNG; if you switch to SVG, update the `src` in `index.html`) | any |
