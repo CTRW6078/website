@@ -1,233 +1,529 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cut The Red Wire | FTC Team 6078</title>
-    <meta name="description" content="FTC Team 6078 Cut The Red Wire — a FIRST Tech Challenge robotics team from Apex, NC, competing since 2012 out of Apex Maker Club.">
-    <link rel="icon" href="assets/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cut the Red Wire · FTC Team 6078 · Apex, NC</title>
+  <meta name="description" content="FIRST Tech Challenge Team 6078 from Apex, North Carolina. Students designing, cutting, and wiring competition robots since 2012.">
+  <meta name="theme-color" content="#F3F3F0">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cut the Red Wire · FTC Team 6078">
+  <meta property="og:description" content="Students designing, cutting, and wiring competition robots in Apex, North Carolina since 2012.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>document.documentElement.className += " js";</script>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
 </head>
+
+<!--
+  STILL TO FILL
+  - Sponsor logos: only MetLife has a logo file; the rest are text. Add files to img/sponsors/ to swap them in.
+  - Robot balloons: positions were placed by eye on the render; nudge --x / --y if one is off.
+-->
+
 <body>
-    <nav id="nav">
-        <div class="container nav-content">
-            <a href="#home" class="brand">
-                <img src="assets/logo.png" alt="" width="36" height="43">
-                <span>CUT THE <em>RED</em> WIRE</span>
-            </a>
-            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span>
-            </button>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#team">Team</a>
-                <a href="#robot">Robot</a>
-                <a href="#seasons">Seasons</a>
-                <a href="#outreach">Outreach</a>
-                <a href="#sponsors">Sponsors</a>
-                <a href="#contact" class="nav-cta">Contact</a>
-            </div>
-        </div>
-    </nav>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <header id="home" class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <p class="eyebrow">FIRST Tech Challenge &middot; Team 6078</p>
-                <h1>Cut The <span>Red</span> Wire</h1>
-                <p class="lead">A student robotics team from Apex, North Carolina. We design, build and program competition robots, and teach STEM to kids in our community.</p>
-                <div class="hero-actions">
-                    <a href="#robot" class="btn btn-primary">See our robot</a>
-                    <a href="#team" class="btn btn-ghost">Meet the team</a>
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Cut the Red Wire, FTC Team 6078, home">
+        <img class="brand-mark" src="img/logo.png" width="326" height="400" alt="">
+        <span class="brand-name">Cut the <b>Red Wire</b></span>
+        <span class="brand-num">6078</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+        <ul>
+          <li><a href="#robot">Robot</a></li>
+          <li><a href="#record">Record</a></li>
+                    <li><a href="#team">Team</a></li>
+          <li><a href="#outreach">Outreach</a></li>
+          <li><a href="#sponsor">Sponsors</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wire-host" data-wire-host>
+    <svg class="wire" aria-hidden="true" focusable="false" data-wire>
+      <path class="wire-ghost" data-wire-ghost />
+      <path class="wire-trace" data-wire-trace />
+      <g class="wire-nodes" data-wire-nodes></g>
+      <g class="wire-cut" data-wire-cut></g>
+    </svg>
+
+    <main id="main">
+
+      <!-- ============ SHEET 1 · HERO ============ -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="wrap">
+          <div class="sheet">
+            <div class="sheet-inner">
+              <figure class="photo hero-photo">
+                <img src="img/photos/hero.jpg" width="2400" height="1050"
+                     alt="Cut the Red Wire members and MetLife STEM camp campers behind a competition field with robots">
+              </figure>
+
+              <div class="hero-body">
+                <div class="hero-main">
+                  <h1 class="hero-title" id="hero-title" data-wire-node>
+                    <span class="hero-line">Cut the</span>
+                    <span class="hero-line hero-red">Red Wire</span>
+                  </h1>
+                  <p class="hero-lede">
+                    <em>FIRST</em> Tech Challenge Team 6078 from Apex, North Carolina.
+                    We design our robots in CAD, cut and bend the parts, and wire every
+                    connector ourselves. We have been doing it since 2012.
+                  </p>
+                  <div class="actions">
+                    <a class="btn btn-primary" href="#robot">See our robot, Rift</a>
+                  </div>
                 </div>
-            </div>
-            <img class="hero-logo" src="assets/logo.png" alt="Cut The Red Wire robot logo" width="600" height="722">
-        </div>
-        <div class="container">
-            <dl class="stats">
-                <div><dt>Rookie year</dt><dd>2012</dd></div>
-                <div><dt>Awards won</dt><dd>50+</dd></div>
-                <div><dt>Inspire Awards since 2022</dt><dd>3</dd></div>
-                <div><dt>Campers every summer</dt><dd>20</dd></div>
-            </dl>
-        </div>
-    </header>
 
-    <section id="about">
-        <div class="container split">
-            <div>
-                <p class="eyebrow">About us</p>
-                <h2>Built at Apex Maker Club</h2>
-                <p>Cut The Red Wire is an FTC team run out of <a href="https://apexmakerclub.org/" target="_blank" rel="noopener">Apex Maker Club</a>, a nonprofit in Apex, NC. We've competed in FIRST Tech Challenge every season since 2012.</p>
-                <p>Our members split into programming, CAD, mechanical, electrical and outreach subteams. Outside of competition, we run an annual STEM camp and hold workshops for younger students in our community.</p>
+                <dl class="title-block" role="group" aria-label="Team facts">
+                  <div class="tb-cell tb-wide">
+                    <dt>Team</dt>
+                    <dd class="tb-big">6078</dd>
+                  </div>
+                  <div class="tb-cell">
+                    <dt>Program</dt>
+                    <dd><em>FIRST</em> Tech Challenge</dd>
+                  </div>
+                  <div class="tb-cell">
+                    <dt>Location</dt>
+                    <dd>Apex, NC</dd>
+                  </div>
+                  <div class="tb-cell">
+                    <dt>2025–26 record</dt>
+                    <dd class="mono">13 W · 9 L · 0 T</dd>
+                  </div>
+                  <div class="tb-cell">
+                    <dt>First season</dt>
+                    <dd class="mono">2012</dd>
+                  </div>
+                  <div class="tb-cell tb-wide">
+                    <dt>Latest award</dt>
+                    <dd>Inspire Award · Ascend Leadership Academy Qualifier · <span class="mono">2026-02-07</span></dd>
+                  </div>
+                  <div class="tb-cell tb-wide">
+                    <dt>Season</dt>
+                    <dd>2026–27 BIOBUZZ</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <figure class="photo">
-                <img src="assets/photos/metlife-camp.jpg" alt="Team 6078 and campers posing behind an FTC field with robots" loading="lazy">
-                <figcaption>The team and our MetLife STEM camp campers</figcaption>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SHEET 2 · ROBOT ============ -->
+      <section class="band-ink robot" id="robot" aria-labelledby="robot-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 id="robot-title" data-wire-node>Rift · 2025–26</h2>
+            <div class="sec-intro">
+              <p>
+                Our robot for DECODE, the 2025–26 <em>FIRST</em> Tech Challenge game.
+                Its signature mechanism is a clutch power take-off that shifts drive power
+                to the endgame climb. Select a numbered balloon to find its subsystem in the list.
+              </p>
+            </div>
+          </div>
+
+          <div class="robot-grid">
+            <figure class="robot-figure">
+              <div class="dim" aria-hidden="true">
+                <i class="dim-arrow dim-arrow-l"></i>
+                <span class="dim-label">18.00 in · 457.2 mm · starting size limit</span>
+                <i class="dim-arrow dim-arrow-r"></i>
+              </div>
+              <div class="photo robot-photo">
+                <img src="img/photos/robot-render.jpg" width="1355" height="1016"
+                     alt="Onshape render of Rift, the 2025–26 Cut the Red Wire robot">
+                <!-- Move balloons by editing --x / --y (percent of the image) to point at each part. -->
+                                <button class="balloon" type="button" style="--x:21%; --y:72%" data-item="1" aria-label="Part 1" aria-describedby="bom-1">1</button>
+                <button class="balloon" type="button" style="--x:40%; --y:83%" data-item="2" aria-label="Part 2" aria-describedby="bom-2">2</button>
+                <button class="balloon" type="button" style="--x:69%; --y:55%" data-item="3" aria-label="Part 3" aria-describedby="bom-3">3</button>
+                <button class="balloon" type="button" style="--x:53%; --y:36%" data-item="4" aria-label="Part 4" aria-describedby="bom-4">4</button>
+                <button class="balloon" type="button" style="--x:32%; --y:13%" data-item="5" aria-label="Part 5" aria-describedby="bom-5">5</button>
+              </div>
+              <p class="robot-pick" aria-live="polite" data-robot-pick></p>
+              <figcaption class="robot-caption">
+                <span>View: isometric · Onshape render</span>
+              </figcaption>
             </figure>
-        </div>
-    </section>
 
-    <section id="team" class="alt">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">2026–27 roster</p>
-                <h2>Meet the team</h2>
+            <div class="bom">
+              <table class="table table-ink">
+                <caption class="visually-hidden">Rift subsystems</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Subsystem</th>
+                    <th scope="col">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="bom-1" data-item="1" tabindex="0">
+                    <td class="mono" data-label="Item">1</td>
+                    <td data-label="Subsystem">Chassis</td>
+                    <td data-label="Notes">Pocketed side plates, cut by Fabworks</td>
+                  </tr>
+                  <tr id="bom-2" data-item="2" tabindex="0">
+                    <td class="mono" data-label="Item">2</td>
+                    <td data-label="Subsystem">Drivetrain and PTO climb</td>
+                    <td data-label="Notes">A clutch PTO shifts drive power to the endgame climb</td>
+                  </tr>
+                  <tr id="bom-3" data-item="3" tabindex="0">
+                    <td class="mono" data-label="Item">3</td>
+                    <td data-label="Subsystem">Intake</td>
+                    <td data-label="Notes">Multi-roller intake for artifacts</td>
+                  </tr>
+                  <tr id="bom-4" data-item="4" tabindex="0">
+                    <td class="mono" data-label="Item">4</td>
+                    <td data-label="Subsystem">Launcher</td>
+                    <td data-label="Notes">Scores artifacts into the goal</td>
+                  </tr>
+                  <tr id="bom-5" data-item="5" tabindex="0">
+                    <td class="mono" data-label="Item">5</td>
+                    <td data-label="Subsystem">Vision</td>
+                    <td data-label="Notes">Limelight camera on the top mast</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="bom-tools">Designed in Onshape · autonomous paths with Pedro Pathing · plates by Fabworks</p>
             </div>
-            <div class="team-grid">
-                <article class="member lead-role"><span class="avatar">I</span><h3>Ishanth</h3><p>Programming Lead</p></article>
-                <article class="member lead-role"><span class="avatar">V</span><h3>Vedanth</h3><p>CAD Lead</p></article>
-                <article class="member lead-role"><span class="avatar">B</span><h3>Ben</h3><p>Mechanical Lead</p></article>
-                <article class="member lead-role"><span class="avatar">A</span><h3>Aarit</h3><p>Electrical Lead</p></article>
-                <article class="member lead-role"><span class="avatar">R</span><h3>Reena</h3><p>Mechanical &amp; Outreach Lead</p></article>
-                <article class="member"><span class="avatar">A</span><h3>Ansh</h3><p>Programming</p></article>
-                <article class="member"><span class="avatar">K</span><h3>Karthik</h3><p>Programming</p></article>
-                <article class="member"><span class="avatar">V</span><h3>Varun</h3><p>Programming &amp; Outreach</p></article>
-                <article class="member"><span class="avatar">K</span><h3>Keshav</h3><p>Mechanical</p></article>
-                <article class="member"><span class="avatar">V</span><h3>Vaibhavi</h3><p>Outreach</p></article>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="robot">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">DECODE &middot; 2025–26</p>
-                <h2>Rift</h2>
+      <!-- ============ SHEET 3 · RECORD ============ -->
+      <section class="section record" id="record" aria-labelledby="record-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 id="record-title" data-wire-node>Competition record</h2>
+            <div class="sec-intro">
+              <p>
+                Every award at official events from the last four seasons.
+                Rank is our qualification ranking out of the teams at that event.
+              </p>
+              <p class="sec-links">
+                <a href="https://ftc-events.firstinspires.org/team/6078" rel="noopener">Full history on FTC Events</a>
+                <a href="https://ftcscout.org/teams/6078" rel="noopener">Match stats on FTCScout</a>
+                <a href="https://www.youtube.com/@FTC6078" rel="noopener">Videos on YouTube</a>
+              </p>
             </div>
-            <div class="robot-card">
-                <div class="robot-visual" aria-hidden="true">
-                    <img src="assets/logo.png" alt="">
-                    <span>RIFT</span>
-                </div>
-                <div class="robot-body">
-                    <p>Rift was our DECODE robot. Its main feature was a <strong>clutch-based power take-off (PTO)</strong> that redirects motor power into the endgame climb.</p>
-                    <h3>How we built it</h3>
-                    <ul class="tools">
-                        <li><strong>Onshape</strong><span>Full-robot CAD and design reviews</span></li>
-                        <li><strong>Pedro Pathing</strong><span>Path following for autonomous</span></li>
-                        <li><strong>Fabworks</strong><span>Custom laser-cut and machined parts</span></li>
-                    </ul>
-                    <h3>Season results</h3>
-                    <ul class="awards">
-                        <li><b>Inspire Award, 1st</b> &amp; <b>Winning Alliance</b> — Ascend Leadership Academy Qualifier</li>
-                        <li><b>Inspire Award, 2nd</b> — Thales Academy Qualifier</li>
-                        <li><b>Innovate Award, 2nd</b> — North Carolina Championship</li>
-                    </ul>
-                </div>
-            </div>
+          </div>
+
+          <div class="table-scroll">
+            <table class="table table-record">
+              <caption class="visually-hidden">Awards by season</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Event</th>
+                  <th scope="col">Result</th>
+                  <th scope="col" class="num">Rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="season-row">
+                  <th scope="rowgroup" colspan="4">
+                    <span class="season-name">2025–26 · DECODE · Robot: Rift</span>
+                    <span class="season-meta mono">13 W · 9 L · 0 T</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2026-02-22</td>
+                  <td data-label="Event">North Carolina Championship</td>
+                  <td data-label="Result">Innovate Award, 2nd place</td>
+                  <td class="num mono" data-label="Rank">16 / 36</td>
+                </tr>
+                <tr class="is-top">
+                  <td class="mono" data-label="Date">2026-02-07</td>
+                  <td data-label="Event">Ascend Leadership Academy Qualifier</td>
+                  <td data-label="Result"><strong>Inspire Award</strong> · Winning Alliance Captain</td>
+                  <td class="num mono" data-label="Rank">2 / 19</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2026-01-17</td>
+                  <td data-label="Event">Thales Academy Qualifier</td>
+                  <td data-label="Result">Inspire Award, 2nd place</td>
+                  <td class="num mono" data-label="Rank">7 / 13</td>
+                </tr>
+
+                <tr class="season-row">
+                  <th scope="rowgroup" colspan="4">
+                    <span class="season-name">2024–25 · INTO THE DEEP · Robots: Keystone and Cornerstone</span>
+                    <span class="season-meta mono">15 W · 15 L · 1 T</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2025-04-05</td>
+                  <td data-label="Event">New England Premier Event, Courville Division</td>
+                  <td data-label="Result">Inspire Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">14 / 26</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2025-02-16</td>
+                  <td data-label="Event">North Carolina Championship</td>
+                  <td data-label="Result">Inspire Award, 3rd place · Dean’s List Finalists</td>
+                  <td class="num mono" data-label="Rank">16 / 36</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2025-02-09</td>
+                  <td data-label="Event">Ascend Leadership Academy Qualifier</td>
+                  <td data-label="Result">Inspire Award, 2nd place</td>
+                  <td class="num mono" data-label="Rank">14 / 16</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2025-01-18</td>
+                  <td data-label="Event">Thales Academy Rolesville</td>
+                  <td data-label="Result">Motivate Award · Winning Alliance, 1st team selected</td>
+                  <td class="num mono" data-label="Rank">3 / 24</td>
+                </tr>
+
+                <tr class="season-row">
+                  <th scope="rowgroup" colspan="4">
+                    <span class="season-name">2023–24 · CENTERSTAGE · Robots: Valley, Peak and Summit</span>
+                    <span class="season-meta mono">19 W · 6 L · 0 T</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2024-02-24</td>
+                  <td data-label="Event">North Carolina State Championship</td>
+                  <td data-label="Result">Think Award</td>
+                  <td class="num mono" data-label="Rank">10 / 36</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2024-02-03</td>
+                  <td data-label="Event">Southern Guilford High School Qualifier</td>
+                  <td data-label="Result">Think Award · Finalist Alliance Captain</td>
+                  <td class="num mono" data-label="Rank">1 / 24</td>
+                </tr>
+                <tr class="is-top">
+                  <td class="mono" data-label="Date">2024-01-14</td>
+                  <td data-label="Event">Ascend Leadership Academy Qualifier</td>
+                  <td data-label="Result"><strong>Inspire Award</strong> · Winning Alliance Captain · Innovate Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">1 / 16</td>
+                </tr>
+
+                <tr class="season-row">
+                  <th scope="rowgroup" colspan="4">
+                    <span class="season-name">2022–23 · POWERPLAY · Robot: Lightning McQueen</span>
+                    <span class="season-meta mono">11 W · 9 L · 1 T</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2023-02-18</td>
+                  <td data-label="Event">North Carolina State Championship</td>
+                  <td data-label="Result">Think Award · Inspire Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">21 / 38</td>
+                </tr>
+                <tr>
+                  <td class="mono" data-label="Date">2023-01-28</td>
+                  <td data-label="Event">Ascend Leadership Academy Qualifier</td>
+                  <td data-label="Result">Innovate Award</td>
+                  <td class="num mono" data-label="Rank">5 / 16</td>
+                </tr>
+                <tr class="is-top">
+                  <td class="mono" data-label="Date">2023-01-14</td>
+                  <td data-label="Event">JM Alexander Middle School Qualifier</td>
+                  <td data-label="Result"><strong>Inspire Award</strong> · Finalist Alliance Captain · Control Award, 2nd place · Design Award, 3rd place</td>
+                  <td class="num mono" data-label="Rank">2 / 20</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="seasons" class="alt">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Past robots</p>
-                <h2>Seasons &amp; awards</h2>
-            </div>
-            <ol class="timeline">
-                <li>
-                    <div class="season"><span>2024–25</span><h3>INTO THE DEEP</h3><p class="bots">Keystone &amp; Cornerstone</p></div>
-                    <ul class="awards">
-                        <li><b>Inspire Award, 3rd</b> &amp; <b>Dean's List Finalist</b> — NC Championship</li>
-                        <li>Advanced to the <b>New England Premier Event</b>, where we won <b>Inspire Award, 3rd</b> (Courville Division)</li>
-                        <li><b>Winning Alliance</b> &amp; <b>Motivate Award</b> — Thales Academy Rolesville</li>
-                        <li><b>Inspire Award, 2nd</b> — Ascend Leadership Academy</li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="season"><span>2023–24</span><h3>CENTERSTAGE</h3><p class="bots">Valley, Peak &amp; Summit</p></div>
-                    <ul class="awards">
-                        <li><b>Think Award</b> — NC State Championship</li>
-                        <li><b>Inspire Award, 1st</b>, <b>Winning Alliance</b> &amp; <b>Innovate Award, 3rd</b> — Ascend Leadership Academy (ranked #1)</li>
-                        <li><b>Think Award</b> &amp; <b>Finalist Alliance</b> — Southern Guilford HS (ranked #1)</li>
-                        <li>Ranked #1 (7–0) &amp; <b>Finalist Alliance</b> — LOKI 2024 off-season</li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="season"><span>2022–23</span><h3>POWERPLAY</h3><p class="bots">Lightning McQueen</p></div>
-                    <ul class="awards">
-                        <li><b>Inspire Award, 3rd</b> &amp; <b>Think Award</b> — NC State Championship</li>
-                        <li><b>Inspire Award, 1st</b>, <b>Finalist Alliance</b>, <b>Control Award, 2nd</b> &amp; <b>Design Award, 3rd</b> — JM Alexander MS</li>
-                        <li><b>Innovate Award</b> — Ascend Leadership Academy</li>
-                        <li><b>Winning Alliance</b> — NC Robot in 6 Weeks</li>
-                    </ul>
-                </li>
-            </ol>
-            <p class="note">Full match history on <a href="https://ftcscout.org/teams/6078" target="_blank" rel="noopener">FTCScout</a>.</p>
+      <!-- ============ SHEET 4 · TEAM ============ -->
+      <section class="section team" id="team" aria-labelledby="team-title">
+        <div class="wrap team-grid">
+          <div class="team-text">
+            <h2 id="team-title" data-wire-node>Who we are</h2>
+            <p>
+              Cut the Red Wire is a <em>FIRST</em> Tech Challenge team from Apex, North Carolina.
+              We have competed every season since 2012.
+            </p>
+            <p>We build out of <a href="https://apexmakerclub.org/" rel="noopener">Apex Maker Club</a>, a nonprofit maker space in Apex. Our ten students split into programming, CAD, mechanical, electrical and outreach subteams, each with a student lead.</p>
+            <dl class="facts">
+              <div><dt>Founded</dt><dd class="mono">2012</dd></div>
+              <div><dt>Based in</dt><dd>Apex, NC</dd></div>
+              <div><dt>Students</dt><dd class="mono">10</dd></div>
+              <div><dt>Home base</dt><dd>Apex Maker Club</dd></div>
+            </dl>
+            <table class="table roster">
+              <caption class="visually-hidden">2026–27 roster</caption>
+              <thead><tr><th scope="col">Name</th><th scope="col">Role</th></tr></thead>
+              <tbody>
+                <tr><td>Ishanth</td><td>Programming lead</td></tr>
+                <tr><td>Vedanth</td><td>CAD lead</td></tr>
+                <tr><td>Ben</td><td>Mechanical lead</td></tr>
+                <tr><td>Aarit</td><td>Electrical lead</td></tr>
+                <tr><td>Reena</td><td>Mechanical and outreach lead</td></tr>
+                <tr><td>Ansh</td><td>Programming</td></tr>
+                <tr><td>Karthik</td><td>Programming</td></tr>
+                <tr><td>Varun</td><td>Programming and outreach</td></tr>
+                <tr><td>Keshav</td><td>Mechanical</td></tr>
+                <tr><td>Vaibhavi</td><td>Outreach</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="photo team-photo">
+            <img src="img/photos/team.jpg" width="1800" height="1200" alt="Team members in Cut the Red Wire hoodies watching their DECODE robot on the practice field" loading="lazy">
+          </figure>
         </div>
-    </section>
+      </section>
 
-    <section id="outreach">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Community</p>
-                <h2>Outreach</h2>
+      <!-- ============ SHEET 5 · OUTREACH ============ -->
+      <section class="section outreach" id="outreach" aria-labelledby="outreach-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 id="outreach-title" data-wire-node>Outreach</h2>
+            <div class="sec-intro">
+              <p>We want more kids to get their hands on a robot, especially kids who don’t usually get the chance. We run camps and workshops, and work with local leaders to open up more STEM opportunities for underprivileged youth.</p>
             </div>
-            <div class="outreach-grid">
-                <article class="outreach-card">
-                    <img src="assets/photos/metlife-camp.jpg" alt="Campers in Cut The Red Wire shirts gathered behind an FTC field" loading="lazy">
-                    <div>
-                        <h3>Annual MetLife STEM Camp</h3>
-                        <p>Every summer we host a week-long camp for 20 campers. Our members teach them engineering, coding and robotics hands-on.</p>
-                    </div>
-                </article>
-                <article class="outreach-card">
-                    <img src="assets/photos/outreach-stem-lab.jpg" alt="Team members running a robot demo for a group of kids seated around a course" loading="lazy">
-                    <div>
-                        <h3>Community STEM workshops</h3>
-                        <p>We bring robots to local schools and community centers and run hands-on robot demos and activities for kids. One of these events was featured by Wiley Nickel.</p>
-                    </div>
-                </article>
-            </div>
+          </div>
+
+          <div class="outreach-grid">
+            <article class="story story-lead">
+              <figure class="photo"><img src="img/photos/outreach-featured.jpg" width="2000" height="1267" alt="Team members on stage thanking parents at the MetLife STEM camp closing ceremony, with trophies on the table" loading="lazy"></figure>
+              <h3>MetLife STEM Camp</h3>
+              <p>Every year we host a week-long STEM camp for 20 campers. Our members teach engineering, coding and robotics hands-on, with the team’s robots on a full field.</p>
+            </article>
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-2.jpg" width="2000" height="1499" alt="Kids seated around a small course watching team members demo robot cars" loading="lazy"></figure>
+              <h3>Purpose Learning Lab camps</h3>
+              <p>We run hands-on robotics sessions for underprivileged youth at Purpose Learning Lab’s camps.</p>
+            </article>
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-pll.jpg" width="1600" height="1200" alt="Team members in suits talking with Purpose Learning Lab staff, who is holding a small robot car" loading="lazy"></figure>
+              <h3>Growing the partnership</h3>
+              <p>We meet with Purpose Learning Lab to plan more STEM opportunities for the kids at their camps.</p>
+            </article>
+          </div>
+
+          <h3 class="leaders-title">Working with community leaders</h3>
+          <div class="leaders-grid">
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-budd.jpg" width="1800" height="1349" alt="Six team members in suits with Rift in a U.S. Senate office" loading="lazy"></figure>
+              <h3>Senator Ted Budd’s office</h3>
+              <p>We brought Rift to Senator Ted Budd’s office and met with his staff about creating STEM opportunities for underprivileged youth.</p>
+            </article>
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-rao.jpg" width="1704" height="1278" alt="Team members and young students gathered around a robot demo at Best Brains" loading="lazy"></figure>
+              <h3>Steve Rao at Best Brains</h3>
+              <p>We demoed our robot for Steve Rao and a room of students at Best Brains, and talked about bringing STEM to more kids at camps like Purpose Learning Lab.</p>
+            </article>
+            <article class="story">
+              <figure class="photo"><img src="img/photos/outreach-nickel.jpg" width="800" height="600" alt="Team members standing with Wiley Nickel" loading="lazy"></figure>
+              <h3>Former Rep. Wiley Nickel</h3>
+              <p>Former U.S. Representative Wiley Nickel met with the team to hear about our STEM work and our plans for a robotics camp for underprivileged youth.</p>
+              <p><a href="https://www.linkedin.com/posts/wiley-nickel-4a7266_honored-to-join-ftc-robotics-team-cut-the-ugcPost-7298814447463108609-HuHM/" rel="noopener">Read his post on LinkedIn</a></p>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="sponsors" class="alt">
-        <div class="container">
-            <div class="section-head">
-                <p class="eyebrow">Thank you</p>
-                <h2>Our sponsors</h2>
-                <p>Our season, camp and outreach are made possible by:</p>
+      <!-- ============ SPONSOR ============ -->
+      <section class="section sponsor" id="sponsor" aria-labelledby="sponsor-title">
+        <div class="wrap">
+          <div class="sponsor-grid">
+            <div class="sponsor-pitch">
+              <h2 id="sponsor-title" data-wire-node>Sponsor 6078</h2>
+              <p class="sponsor-lede">
+                Sponsorship pays for robot parts, competition registration, and travel.
+                A manufacturing partner changes what we can build: parts we would spend
+                a week making by hand show up cut, bent, and ready to bolt on.
+              </p>
+              <div class="actions">
+                <a class="btn btn-primary" href="mailto:6078ctrw@gmail.com?subject=Sponsoring%20FTC%206078">Email us about sponsoring</a>
+              </div>
             </div>
-            <ul class="sponsor-grid">
-                <li>goBILDA</li>
-                <li>MetLife</li>
-                <li>Fidelity</li>
-                <li>Polymaker</li>
-                <li>Best Brains</li>
-                <li>AB Photos</li>
-                <li>Stemarga</li>
+
+            <div class="ledger" role="group" aria-labelledby="ledger-title">
+              <h3 class="ledger-title" id="ledger-title">Where the money goes</h3>
+              <dl>
+                <div><dt>Parts and materials</dt><dd>Fabworks plates, goBILDA hardware</dd></div>
+                <div><dt>Competition registration</dt><dd>Qualifiers and championships</dd></div>
+                <div><dt>Travel to events</dt><dd>Out-of-state premier events</dd></div>
+                <div><dt>Outreach programs</dt><dd>MetLife STEM camp, workshops</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <h3 class="sponsors-title">Our sponsors</h3>
+          <ul class="sponsor-logos">
+            <li><img src="img/sponsors/metlife.png" width="600" height="240" alt="MetLife" loading="lazy"></li>
+            <li class="logo-text">goBILDA</li>
+            <li class="logo-text">Fidelity</li>
+            <li class="logo-text">Polymaker</li>
+            <li class="logo-text">Best Brains</li>
+            <li class="logo-text">AB Photos</li>
+            <li class="logo-text">Stemarga</li>
+            <li class="logo-open"><a href="mailto:6078ctrw@gmail.com?subject=Sponsoring%20FTC%206078">This spot is open.<span>Email us about sponsoring</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============ FOOTER / TITLE BLOCK ============ -->
+    <footer class="site-footer" data-wire-end>
+      <div class="wrap">
+        <div class="footer-block">
+          <div class="fb-cell fb-name">
+            <img class="fb-logo" src="img/logo.png" width="326" height="400" alt="">
+            <span class="fb-label">Team</span>
+            <span class="fb-title">Cut the <b>Red Wire</b></span>
+            <span class="mono">FTC 6078 · Apex, NC</span>
+          </div>
+          <div class="fb-cell">
+            <span class="fb-label">Contact</span>
+            <a href="mailto:6078ctrw@gmail.com">6078ctrw@gmail.com</a>
+          </div>
+          <div class="fb-cell">
+            <span class="fb-label">Location</span>
+            <span>Apex, North Carolina</span>
+          </div>
+          <div class="fb-cell">
+            <span class="fb-label">Follow</span>
+            <ul class="fb-links">
+              <li><a href="https://www.youtube.com/@FTC6078" rel="noopener">YouTube</a></li>
+              <li><a href="https://www.instagram.com/6078.ftc/" rel="noopener">Instagram</a></li>
+              <li><a href="https://github.com/CTRW6078" rel="noopener">GitHub</a></li>
             </ul>
-            <p class="note">Interested in supporting the team? <a href="mailto:6078ctrw@gmail.com?subject=Sponsoring%20FTC%206078">Get in touch</a>.</p>
+          </div>
+          <div class="fb-cell">
+            <span class="fb-label">Results</span>
+            <ul class="fb-links">
+              <li><a href="https://ftc-events.firstinspires.org/team/6078" rel="noopener">FTC Events</a></li>
+              <li><a href="https://ftcscout.org/teams/6078" rel="noopener">FTCScout</a></li>
+            </ul>
+          </div>
+          <div class="fb-cell fb-meta">
+            <span class="fb-label">Apex Maker Club</span>
+            <a href="https://apexmakerclub.org/" rel="noopener">apexmakerclub.org</a>
+            <span class="mono">© 2026 Cut the Red Wire</span>
+          </div>
         </div>
-    </section>
-
-    <section id="contact">
-        <div class="container contact">
-            <div>
-                <p class="eyebrow">Contact</p>
-                <h2>Get in touch</h2>
-                <p>Questions, sponsorships, outreach requests or scrimmage invites: we'd love to hear from you.</p>
-            </div>
-            <div class="contact-links">
-                <a href="mailto:6078ctrw@gmail.com"><span>Email</span>6078ctrw@gmail.com</a>
-                <a href="https://www.youtube.com/@FTC6078" target="_blank" rel="noopener"><span>YouTube</span>@FTC6078</a>
-                <a href="https://ftcscout.org/teams/6078" target="_blank" rel="noopener"><span>Stats</span>FTCScout #6078</a>
-                <a href="https://apexmakerclub.org/" target="_blank" rel="noopener"><span>Home base</span>Apex Maker Club</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year">2026</span> Cut The Red Wire &middot; FTC Team 6078 &middot; Apex, NC</p>
-        </div>
+      </div>
     </footer>
+  </div>
 
-    <script src="main.js"></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
